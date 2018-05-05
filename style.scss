@@ -7,6 +7,10 @@
     font-size: 18px;
     line-height: 34px;
     font-family: 'Inconsolata', monospace;
+    @media (max-width: 845px) {
+        font-size: 14px;
+        line-height: 27px;
+    }
 }
 html { 
   background: url(img/background.jpg) no-repeat center center fixed; 
@@ -62,4 +66,10 @@ h1,h2,h3,h4{
 
 ul{
     list-style: none;
+}
+
+#experience{
+    @media (max-width: 845px) {
+        order: 2 !important;
+    }
 }
