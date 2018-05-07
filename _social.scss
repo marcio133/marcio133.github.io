@@ -1,0 +1,42 @@
+.social-bar {
+	position: fixed;
+	left: -15px;
+    top: 50px;
+    z-index: 99999;	
+	&__item {
+		padding: 10px 10px 10px 25px;
+		color: white;
+		font-size: 30px;
+		text-align: center;
+		
+		transition-property: transform, opacity;
+		transition-duration: 100ms;
+        transition-timing-function: ease-in-out;
+        cursor: pointer;
+	}
+	
+	&__item:hover {
+		transform: translate(15px);
+		opacity: 0.9;
+	}
+	
+	&__fb {
+		background-color: #3b5999;
+	}
+	
+	&__twitter {
+		background-color: #55acee;
+	}
+	
+	&__linkedin {
+		background-color: #0077B5;
+	}
+	
+	&__github {
+		background-color: #000;
+	}
+	
+	&__printerest {
+		background-color: #bd081c;
+	}
+}
