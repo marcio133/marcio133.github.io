@@ -19,6 +19,7 @@ $(document).on('mousewheel ', function(e) {
     }
 
     $elements.each(function() {
+
         var scrollTop = $(window).scrollTop(),
             elementOffset = $(this).offset().top,
             distance = (elementOffset - scrollTop);
@@ -30,6 +31,7 @@ $(document).on('mousewheel ', function(e) {
         } else {
             if (distance < 0) {
                 $elementToScrollTo = $(this);
+                
                 return false;
             }
         }
@@ -40,7 +42,10 @@ $(document).on('mousewheel ', function(e) {
     clearTimeout($.data(this, 'scrollTimer'));
     $.data(this, 'scrollTimer', setTimeout(function() { //user stopped scrolling
         scrollTo($elementToScrollTo);
+        // $( $elementToScrollTo ).toggleClass( 'animated fadeIn', addOrRemove );
         $($elementToScrollTo).addClass('animated fadeIn');
+        setTimeout(function(){ $($elementToScrollTo).removeClass('animated fadeIn'); }, 1000);
+
     }, 80));
 
 });
