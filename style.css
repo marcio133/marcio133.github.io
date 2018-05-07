@@ -72,10 +72,17 @@ h1, h2, h3, h4 {
 
 ul {
   list-style: none;
+  padding-left: 0;
 }
 
 @media (max-width: 845px) {
-  #experience {
+  #experience, #picture {
     order: 2 !important;
+  }
+}
+
+@media (max-width: 845px) {
+  #skills {
+    margin-top: -190px;
   }
 }

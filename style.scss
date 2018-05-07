@@ -29,6 +29,7 @@ section{
     .row{
         height: 100%;
         .col-md-6{
+
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -66,10 +67,17 @@ h1,h2,h3,h4{
 
 ul{
     list-style: none;
+    padding-left: 0;
 }
 
-#experience{
+#experience, #picture{
     @media (max-width: 845px) {
         order: 2 !important;
+    }
+}
+
+#skills{
+    @media (max-width: 845px) {
+        margin-top: -190px;
     }
 }
