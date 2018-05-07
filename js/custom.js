@@ -40,6 +40,7 @@ $(document).on('mousewheel ', function(e) {
     clearTimeout($.data(this, 'scrollTimer'));
     $.data(this, 'scrollTimer', setTimeout(function() { //user stopped scrolling
         scrollTo($elementToScrollTo);
+        $($elementToScrollTo).addClass('animated fadeIn');
     }, 80));
 
 });
