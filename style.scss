@@ -2,8 +2,7 @@
 @import '_social.scss';
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
-
-*{
+* {
     color: $text-color;
     font-size: 18px;
     line-height: 34px;
@@ -13,72 +12,96 @@
         line-height: 27px;
     }
 }
-html { 
-  background: url(img/background.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+
+html {
+    background: url(img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-body{
+body {
     background: none;
 }
 
-section{
-    height: 100vh;
-    .row{
+section {
+    height: 60vh;
+    .row {
         height: 100%;
-        .col-md-6{
-
+        .col-md-6 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @media (max-width: 550px) {
+                display: block;
+            }
+        }
+        .full-heigth {
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        .full-heigth{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        .col-md-12 {
+            padding-left: 20%;
+            padding-right: 20%;
+            @media (max-width: 550px) {
+                padding-left: 10%;
+                padding-right: 10%;
+            }
         }
-        .col-md-12{
-            padding-left:20%;
-            padding-right:20%;
-        }
+    }
+    @media (max-width: 550px) {
+        height: unset;
+        margin-bottom: 15%;
     }
 }
 
-h1,h2,h3,h4{
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Work Sans', sans-serif;
     font-weight: 700;
 }
 
-.avatar{
+.avatar {
     width: 75%;
     margin: auto;
 }
 
-.title-card{
-    background-color: $primary-color; 
+.title-card {
+    background-color: $primary-color;
     padding: 20px;
     width: 80%;
     margin: auto;
     color: $text-color;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 
-ul{
+ul {
     list-style: none;
     padding-left: 0;
 }
 
-#experience, #picture{
+#experience,
+#picture {
     @media (max-width: 845px) {
         order: 2 !important;
     }
 }
 
-#skills{
-    @media (max-width: 845px) {
-        margin-top: -190px;
+#skills {
+    @media (max-width: 550px) {
+        margin-top: 20px;
+    }
+}
+
+.title-section {
+    padding-top: 30vh;
+    margin-bottom: 10vh;
+    @media (max-width: 550px) {
+        padding-top: 30px;
+        margin-bottom: 30px;
     }
 }
